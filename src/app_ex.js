@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000
 
 const publicDipath= path.join(__dirname, '../public') // return the path of index.html
 const viewsPath = path.join(__dirname, '../views-changed-name/views')
-const partialsPath = path.join(__dirname, '../html-code/partials')
+const partialsPath = path.join(__dirname, '../views-changed-name/partials')
 
 // setup handelbars engine and vies location
 app.set('view engine', 'hbs')
@@ -28,7 +28,7 @@ app.use(express.static(publicDipath))
 
 app.get('', (req,res) =>
 	{
-		// res.render('index',{title: 'Wheather', name:'moussaoui'})
+		res.render('index')
 	})
 app.get('/about', (re,res) => {
 	res.render('about',{title: 'About', name:'moussaoui'})
