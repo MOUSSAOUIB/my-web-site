@@ -31,11 +31,11 @@ app.get('', (req,res) =>
 		res.render('index')
 	})
 app.get('/about', (re,res) => {
-	res.render('about',{title: 'About', name:'moussaoui'})
+	res.render('about')
 })
 
 app.get('/blog', (req,res) => {
-	res.render('help',{title: 'Blog', name:'Abdeslam Moussaoui'})
+	res.render('help')
 })
 
 
